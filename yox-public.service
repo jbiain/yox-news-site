@@ -1,0 +1,14 @@
+[Unit]
+Description=YOX News public static site
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/usr/bin/python3 /root/yox-public-server.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
